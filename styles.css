@@ -109,10 +109,14 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0
 
 .hero,
 .content-grid,
+.risk-section,
 .scoreboard,
 .process-section,
+.forms-section,
+.activity-section,
 .form-section,
 .faq,
+.appeal-section,
 .testimonials,
 .footer {
   max-width: 1180px;
@@ -249,6 +253,50 @@ dd { color: var(--green); font-weight: 800; }
 .rules li { color: var(--muted); }
 .rules ul { padding-left: 1.1rem; display: grid; gap: 0.5rem; }
 
+.risk-section {
+  padding: 0 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 1rem;
+}
+
+.risk-section h2,
+.section-head h2,
+.activity-section h2,
+.appeal-section h2 {
+  font-size: 1.55rem;
+  margin-bottom: 0.75rem;
+}
+
+.risk-section p {
+  color: var(--muted);
+}
+
+.risk-levels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.risk-levels article {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--gold);
+  padding: 0.9rem;
+}
+
+.risk-levels .systemic {
+  border-top-color: var(--red);
+}
+
+.risk-levels span {
+  display: block;
+  color: var(--navy-dark);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
 .scoreboard {
   margin-top: 0.5rem;
   padding: 1.5rem;
@@ -332,6 +380,77 @@ dd { color: var(--green); font-weight: 800; }
 .process-grid p {
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.forms-section {
+  padding: 0 1.5rem 2rem;
+}
+
+.section-head {
+  margin-bottom: 1rem;
+}
+
+.forms-table {
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.forms-table > div {
+  display: grid;
+  grid-template-columns: 170px 1fr 240px;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #e3e7ee;
+}
+
+.forms-table > div:last-child {
+  border-bottom: 0;
+}
+
+.forms-table span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.forms-table span:first-child {
+  color: var(--navy-dark);
+  font-weight: 800;
+}
+
+.forms-table .table-head {
+  background: var(--navy-dark);
+}
+
+.forms-table .table-head span {
+  color: #fff;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.activity-section {
+  padding: 0 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.activity-section article {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--navy);
+  padding: 1.2rem;
+}
+
+.activity-section article:first-child {
+  border-top-color: var(--red);
+}
+
+.activity-section ul {
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.5rem;
+  color: var(--muted);
 }
 
 .form-section {
@@ -576,6 +695,18 @@ details p {
   font-size: 0.92rem;
 }
 
+.appeal-section {
+  padding: 0 1.5rem 2rem;
+}
+
+.appeal-section p:not(.eyebrow) {
+  background: var(--paper-warm);
+  border: 1px solid #ddd2b7;
+  border-left: 5px solid var(--gold);
+  padding: 1rem;
+  color: var(--muted);
+}
+
 .testimonials {
   padding: 2rem 1.5rem;
 }
@@ -622,9 +753,12 @@ blockquote cite {
   .topbar-inner,
   .hero,
   .content-grid,
+  .risk-section,
+  .risk-levels,
   .scoreboard,
   .impact-grid,
   .process-grid,
+  .activity-section,
   .field-row,
   .faq-grid,
   .testi-grid {
@@ -643,5 +777,10 @@ blockquote cite {
   .slider-labels {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .forms-table > div {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
   }
 }
