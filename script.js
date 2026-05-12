@@ -2,13 +2,27 @@
 
 const stipend = document.getElementById('stipend');
 const stipendVal = document.getElementById('stipend-val');
+const tokensSaved = document.getElementById('tokens-saved');
+const ciSaved = document.getElementById('ci-saved');
+const pmSaved = document.getElementById('pm-saved');
+const dashSaved = document.getElementById('dash-saved');
+
+function formatNumber(value) {
+  return Math.round(value).toLocaleString('en-US');
+}
 
 function updateSlider() {
   const value = Number.parseInt(stipend.value, 10);
   let label = `₿${value.toLocaleString('en-US')} / month`;
-  if (value >= 5000) label += ' · national treasure';
-  else if (value >= 2500) label += ' · senior vibe coder';
+  if (value >= 5000) label += ' · national infrastructure concern';
+  else if (value >= 2500) label += ' · elevated throughput risk';
   stipendVal.textContent = label;
+
+  const multiplier = value / 500;
+  tokensSaved.textContent = formatNumber(1250000 * multiplier);
+  ciSaved.textContent = formatNumber(320 * multiplier);
+  pmSaved.textContent = formatNumber(14 * multiplier);
+  dashSaved.textContent = formatNumber(3 * multiplier);
 }
 
 stipend.addEventListener('input', updateSlider);
@@ -84,7 +98,7 @@ form.addEventListener('submit', (event) => {
     successPanel.style.display = 'block';
     const random = Math.random().toString(36).slice(2, 8).toUpperCase();
     const stamp = Date.now().toString(36).slice(-4).toUpperCase();
-    appIdSpan.textContent = `VBI-${random}-${stamp}`;
+    appIdSpan.textContent = `CDM-${random}-${stamp}`;
     successPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 900);
 });
