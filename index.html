@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>National Vibe Coder Basic Income Program</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="seal" aria-hidden="true">
+      <span>VBI</span>
+    </div>
+    <div>
+      <div class="agency">Department of Computational Relief</div>
+      <div class="program">Office of Voluntary Code Abstinence</div>
+    </div>
+    <nav class="nav" aria-label="Program navigation">
+      <a href="#eligibility">Eligibility</a>
+      <a href="#apply">Apply</a>
+      <a href="#notices">Notices</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="notice-strip">
+    <strong>PUBLIC NOTICE:</strong>
+    Emergency token-conservation benefits are now open for qualified vibe coders.
+  </section>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Form VBI-1040-NC · Fiscal Year 2026</p>
+      <h1>Basic income for citizens who agree not to ship code.</h1>
+      <p class="lede">AI companies are spending hundreds of dollars per applicant subsidizing tokens, saturated queues, broken SaaS workflows, and “one quick prototype” incidents. The most efficient infrastructure intervention is simple: compensate high-risk vibe coders for remaining peacefully offline.</p>
+      <div class="hero-actions">
+        <a class="primary" href="#apply">Begin Application</a>
+        <a class="secondary" href="#eligibility">Check Eligibility</a>
+      </div>
+    </div>
+    <aside class="case-card" aria-label="Program status">
+      <div class="case-title">Program Status</div>
+      <dl>
+        <div><dt>Monthly Average Award</dt><dd>₿847</dd></div>
+        <div><dt>Pull Requests Prevented</dt><dd>18,406,221</dd></div>
+        <div><dt>Infrastructure Load Reduced</dt><dd>99.8%</dd></div>
+      </dl>
+      <p>Applications are reviewed in order of recent Copilot panic, abandoned side projects, and unexplained Kubernetes clusters.</p>
+    </aside>
+  </section>
+
+  <section class="content-grid" id="eligibility">
+    <article class="panel">
+      <h2>Program Purpose</h2>
+      <p>The Voluntary Vibe Coder Basic Income Program provides temporary relief payments to individuals whose creative use of AI-assisted development tools places unusual strain on token markets and SaaS infrastructure.</p>
+      <p>Approved participants pledge not to open an IDE, ask an agent to “just scaffold it,” or deploy an unfinished dashboard to production during the benefit period.</p>
+    </article>
+    <article class="panel rules">
+      <h2>Eligibility Guidelines</h2>
+      <ul>
+        <li>Created at least one repository named <code>new-new-final-app</code>.</li>
+        <li>Generated more code than you personally read last month.</li>
+        <li>Can submit artworks, poems, recipes, or screenshots of refusing Cursor.</li>
+        <li>Agree to archive your GitHub and touch grass in a supervised manner.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="form-section" id="apply">
+    <div class="form-heading">
+      <div>
+        <p class="eyebrow">Official Application</p>
+        <h2>Request for Code Abstinence Benefits</h2>
+      </div>
+      <span class="form-code">OMB No. 404-CODE</span>
+    </div>
+
+    <form id="application" class="app-form" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Legal Name or GitHub Handle <span>*</span></label>
+          <input type="text" id="name" placeholder="e.g. alex_null_pointer" required>
+        </div>
+        <div class="field">
+          <label for="langs">Languages You Will Not Use <span>*</span></label>
+          <input type="text" id="langs" placeholder="Python, JavaScript, Rust, all of them">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Benefits Payment Address</label>
+          <input type="email" id="email" placeholder="name@example.gov">
+        </div>
+        <div class="field">
+          <label for="repo">Final Repository for Archival Review</label>
+          <input type="text" id="repo" placeholder="github.com/you/final-final-prototype">
+        </div>
+      </div>
+
+      <div class="field stipend-field">
+        <label for="stipend">Requested Monthly Benefit: <strong id="stipend-val">₿500 / month</strong></label>
+        <input type="range" id="stipend" min="100" max="5000" step="50" value="500">
+        <div class="slider-labels">
+          <span>₿100 Basic</span>
+          <span>₿2,500 Senior Vibe Coder</span>
+          <span>₿5,000 National Treasure</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Required Artworks <span>*</span></label>
+        <p class="hint">Attach non-code evidence of productive idleness: drawings, poems, watercolor attempts, diary scans, bread recipes, or screenshots proving you declined to open Cursor.</p>
+        <div class="upload-zone" id="upload-zone">
+          <input type="file" id="file-input" accept="image/*,application/pdf,.txt" multiple>
+          <div class="upload-prompt" id="upload-prompt">
+            <strong>Attach Artworks</strong>
+            <span>Drop files here or click to browse</span>
+          </div>
+          <div class="upload-preview" id="upload-preview"></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="oath">Applicant Oath</label>
+        <textarea id="oath" rows="4" placeholder="I solemnly affirm that, for the duration of my benefit period, I will not open an IDE, initialize a fresh Next.js app, or ask an AI agent to continue where I left off..."></textarea>
+      </div>
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="agree" required>
+        <span>I understand that my GitHub may be archived, my Hacker News account may be cooled down, and all newsletter subscriptions may be replaced with a public-library card.</span>
+      </label>
+
+      <div class="form-footer">
+        <p>False statements may result in immediate restoration of your Jira permissions.</p>
+        <button type="submit">
+          <span class="btn-text">Submit Application</span>
+          <span class="btn-loading" style="display:none">Reviewing...</span>
+        </button>
+      </div>
+    </form>
+
+    <div class="success-panel" id="success" style="display:none">
+      <h3>Application Accepted for Preliminary Non-Engineering Review</h3>
+      <p>Your repository will be placed in a soft archival queue within 48 hours. Benefits begin after identity verification and completion of the mandatory “Zen and the Art of Not Shipping” orientation.</p>
+      <p class="success-id">Application ID: <span id="app-id"></span></p>
+      <p class="fine">This is satire. The program is not real. No data was saved. Please continue writing code responsibly, unless the infrastructure asks for mercy.</p>
+    </div>
+  </section>
+
+  <section class="testimonials" id="notices">
+    <h2>Public Comments</h2>
+    <div class="testi-grid">
+      <blockquote>
+        <p>“Six months without commits. I read forty books and learned the names of local trees.”</p>
+        <cite>Former Full-Stack Developer, Case No. VBI-1182</cite>
+      </blockquote>
+      <blockquote>
+        <p>“My last PR was approved entirely by bots. That was when I knew the nation needed me to stop.”</p>
+        <cite>Ex-Staff Engineer, Case No. VBI-2209</cite>
+      </blockquote>
+      <blockquote>
+        <p>“The stipend was cheaper than my monthly token burn. Everyone won.”</p>
+        <cite>Anonymous Infrastructure Provider</cite>
+      </blockquote>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div>
+    <strong>Department of Computational Relief</strong>
+    <span>National Vibe Coder Basic Income Program</span>
+  </div>
+  <p>This website is a satirical prototype. Anthropic, OpenAI, Cursor, and other named organizations are not affiliated with this page.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
